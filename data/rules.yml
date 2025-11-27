@@ -1,0 +1,23 @@
+version: "3.1"
+
+
+rules:
+- rule: pedir_ciudad_si_no_existe
+steps:
+- intent: ask_recommendation
+- condition:
+- slot_was_set:
+- ciudad: null
+- action: utter_ask_city
+
+
+- rule: recomendar_con_accion
+steps:
+- intent: ask_recommendation
+- action: action_recommend_tourism
+
+
+- rule: detalles_con_accion
+steps:
+- intent: ask_details
+- action: action_provide_details

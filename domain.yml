@@ -1,0 +1,58 @@
+version: "3.5"
+
+
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- ask_recommendation
+- provide_location
+- ask_activity
+- ask_details
+- chitchat
+
+
+entities:
+- ciudad
+- tipo_turismo
+- actividad
+
+
+slots:
+ciudad:
+type: text
+influence_conversation: true
+tipo_turismo:
+type: text
+influence_conversation: true
+actividad:
+type: text
+influence_conversation: true
+
+
+responses:
+utter_greet:
+- text: "¡Hola! Soy tu asistente de turismo. ¿En qué ciudad o tipo de actividad estás interesado?"
+utter_goodbye:
+- text: "¡Hasta luego! Que tengas un buen viaje."
+utter_ask_city:
+- text: "¿En qué ciudad te gustaría recibir recomendaciones? (ej. Quito, Baños, Mindo)"
+utter_ask_type:
+- text: "¿Qué tipo de turismo prefieres? (naturaleza, aventura, cultura, gastronomía)"
+utter_no_data:
+- text: "Aún no tengo información para esa ciudad. ¿Quieres recomendaciones de Quito, Baños o Mindo?"
+utter_ask_activity:
+- text: "¿Qué actividad te interesa? (senderismo, rafting, avistamiento de aves, comida típica)"
+utter_provide_example:
+- text: "Puedes decir: '¿Qué puedo visitar en Quito?' o 'Recomiéndame lugares de aventura cerca de Baños'"
+
+
+actions:
+- action_recommend_tourism
+- action_provide_details
+
+
+session_config:
+session_expiration_time: 60
+carry_over_slots_to_new_session: true

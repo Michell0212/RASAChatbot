@@ -1,0 +1,64 @@
+version: "3.1"
+examples: |
+- adiós
+- hasta luego
+- nos vemos
+- gracias, chao
+
+
+- intent: ask_recommendation
+examples: |
+- ¿qué lugares puedo visitar?
+- recomiéndame sitios turísticos
+- que me recomiendas en Quito
+- lugares turísticos cerca de Baños
+- quiero conocer lugares de naturaleza
+- ¿qué puedo visitar en Mindo?
+
+
+- intent: provide_location
+examples: |
+- estoy en Quito
+- vivo en Baños
+- en Mindo
+- en Cuenca
+
+
+- intent: ask_activity
+examples: |
+- quiero hacer senderismo
+- busco rafting
+- quiero avistamiento de aves
+- me interesa la gastronomía
+
+
+- intent: ask_details
+examples: |
+- ¿qué horarios tiene?
+- ¿cuánto cuesta?
+- ¿cómo llego?
+
+
+# Entities examples
+- entity: ciudad
+examples: |
+- Quito
+- Baños
+- Mindo
+- Cuenca
+
+
+- entity: tipo_turismo
+examples: |
+- naturaleza
+- aventura
+- cultura
+- gastronomía
+
+
+- entity: actividad
+examples: |
+- senderismo
+- rafting
+- canopy
+- avistamiento de aves

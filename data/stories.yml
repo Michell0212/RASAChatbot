@@ -1,0 +1,23 @@
+version: "3.1"
+
+
+stories:
+- story: flujo_recomendacion_ciudad
+steps:
+- intent: greet
+- action: utter_greet
+- intent: ask_recommendation
+- action: action_recommend_tourism
+
+
+- story: usuario_indica_ciudad
+steps:
+- intent: ask_recommendation
+- intent: provide_location
+- action: action_recommend_tourism
+
+
+- story: usuario_pide_detalles
+steps:
+- intent: ask_details
+- action: action_provide_details
